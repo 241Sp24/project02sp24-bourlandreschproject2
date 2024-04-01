@@ -8,6 +8,6 @@ package studentdriver;
  *
  * @author S559828
  */
-public class OnlineStudent {
+public class OnlineStudent extends StudentDriver {
     
 }
