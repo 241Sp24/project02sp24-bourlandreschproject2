@@ -1,13 +1,7 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package studentdriver;
 
-/**
- *
- * @author S559828
- */
+
 public abstract class StudentFees {
     public String studentName;
     public int studentId;
@@ -20,9 +14,9 @@ public abstract class StudentFees {
         this.studentId = studentId;
         this.isEnrolled = isEnrolled;
     }
-    public boolean isIsEnrolled() {
-        
-    }
+//    public boolean isIsEnrolled() {
+//        
+//    }
 
     public int getCREDITS_PER_COURSE() {
         return CREDITS_PER_COURSE;
