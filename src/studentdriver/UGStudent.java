@@ -30,14 +30,16 @@ public class UGStudent extends StudentFees {
        int coursesEnrolled = getCoursesEnrolled();
        int totalCredits = coursesEnrolled * getCREDITS_PER_COURSE();
        double payableAmount = (totalCredits * getPER_CREDIT_FEE()) - getScholarshipAmount() + ADDITIONAL_FEE;
-       
+       if(!isIsEnrolled()) {
+           payableAmount = 0.0;
+       }
        return payableAmount;
     }
     @Override
     public String toString() {
-        return  super.toString() + "\nEnrolled: " + isIsEnrolled() + "\nScholarship: " + isHasScholarship() + "\nScholarship Amount: " + 
-                getScholarshipAmount() + "\nCourses Enrolled: " + 
-                getCoursesEnrolled()+ "\nPayable Amount: " + getPayableAmount();
+        return  super.toString() + "\nScholarship: " + isHasScholarship() + "\nScholarship Amount: " + 
+                String.format("%.2f", getScholarshipAmount()) + "\nCourses Enrolled: " + 
+                getCoursesEnrolled()+ "\nPayable Amount: " + String.format("%.2f", getPayableAmount());
     }
         
 }

@@ -49,13 +49,10 @@ public abstract class StudentFees {
     public abstract double getPayableAmount();
         
    
-
     @Override
     public String toString() {
-        return "Student name: " + getStudentName() + "\nStudent id: " + getStudentId();
+        return "Student name: " + getStudentName() + 
+                "\nStudent id: " + getStudentId() + "\nEnrolled: " + isIsEnrolled();
     }
-    
-    
-        
     
 }
