@@ -47,6 +47,7 @@ public abstract class StudentFees {
     }
 
     public abstract double getPayableAmount();
+<<<<<<< HEAD
 
     @Override
     public String toString() {
@@ -54,4 +55,14 @@ public abstract class StudentFees {
                 + "\nStudent id: " + getStudentId() + "\nEnrolled: " + isIsEnrolled();
     }
 
+=======
+        
+   
+    @Override
+    public String toString() {
+        return "Student name: " + getStudentName() + 
+                "\nStudent id: " + getStudentId() + "\nEnrolled: " + isIsEnrolled();
+    }
+    
+>>>>>>> e71f5801472029e4f710321e1bfe7aa129e1684d
 }

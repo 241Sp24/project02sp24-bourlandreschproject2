@@ -1,21 +1,31 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package studentdriver;
+<<<<<<< HEAD
 
 public class StudentDriver {
 
     public static void main(String[] args) {
 
         System.out.println("Project02");
+=======
+import java.util.*;
+import java.io.*;
+public class StudentDriver {
+
+    
+    public static void main(String[] args) throws FileNotFoundException {
+        File inputFile = new File("input.csv");
+        Scanner scanner = new Scanner(inputFile);
+>>>>>>> e71f5801472029e4f710321e1bfe7aa129e1684d
         StudentFees[] students = new StudentFees[12];
+        
+
         students[0] = new UGStudent("Bob", 101, true, true, 400, 3);
         students[1] = new UGStudent("Dave", 102, true, false, 0, 2);
         students[2] = new UGStudent("John", 103, false, false, 0, 2);
         students[3] = new UGStudent("Harry", 104, true, true, 800, 4);
         students[4] = new UGStudent("Steve", 105, true, false, 0, 3);
+<<<<<<< HEAD
         students[5] = new UGStudent("Bob", 101, true, true, 400, 3);
         students[6] = new UGStudent("Dave", 102, true, false, 0, 2);
         students[7] = new UGStudent("John", 103, false, false, 0, 2);
@@ -25,6 +35,18 @@ public class StudentDriver {
         students[11] = new UGStudent("Harry", 104, true, true, 800, 4);
 
         for (StudentFees student : students) {
+=======
+        students[5] = new GraduateStudent("Gary", 201, true, true, "full", 3);
+        students[6] = new GraduateStudent("Brock", 202, true, false, 4);
+        students[7] = new GraduateStudent("Drake", 203, true, true, "half", 3);
+        students[8] = new GraduateStudent("Colin", 204, true, true, "half", 3);
+        students[9] = new OnlineStudent("Victor", 301, true, 6);
+        students[10] = new OnlineStudent("Annie", 302, true, 5);
+        students[11] = new OnlineStudent("Mary", 303, true, 8);
+        
+        
+        for(StudentFees student: students) {
+>>>>>>> e71f5801472029e4f710321e1bfe7aa129e1684d
             System.out.println(student.toString());
             System.out.println("");
         }
