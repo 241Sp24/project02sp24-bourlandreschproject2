@@ -1,6 +1,7 @@
 
 package studentdriver;
-
+import java.util.*;
+import java.io.*;
 
 public class StudentDriver {
 
@@ -10,7 +11,6 @@ public class StudentDriver {
         Scanner scanner = new Scanner(inputFile);
         StudentFees[] students = new StudentFees[12];
         
-
         students[0] = new UGStudent("Bob", 101, true, true, 400, 3);
         students[1] = new UGStudent("Dave", 102, true, false, 0, 2);
         students[2] = new UGStudent("John", 103, false, false, 0, 2);
