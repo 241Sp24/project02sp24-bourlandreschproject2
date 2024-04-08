@@ -5,11 +5,10 @@
  */
 package studentdriver;
 
-
 public class StudentDriver {
 
-    
     public static void main(String[] args) {
+
         System.out.println("Project02");
         StudentFees[] students = new StudentFees[12];
         students[0] = new UGStudent("Bob", 101, true, true, 400, 3);
@@ -24,9 +23,8 @@ public class StudentDriver {
         students[9] = new UGStudent("Steve", 105, true, false, 0, 3);
         students[10] = new UGStudent("John", 103, false, false, 0, 2);
         students[11] = new UGStudent("Harry", 104, true, true, 800, 4);
-        
-        
-        for(StudentFees student: students) {
+
+        for (StudentFees student : students) {
             System.out.println(student.toString());
             System.out.println("");
         }

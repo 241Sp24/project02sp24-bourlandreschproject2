@@ -1,7 +1,5 @@
-
 package studentdriver;
 
+public class GraduateStudent extends StudentFees {
 
-public class GraduateStudent extends StudentDriver {
-    
 }
