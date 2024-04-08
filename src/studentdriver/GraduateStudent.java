@@ -1,7 +1,9 @@
-
 package studentdriver;
 
+public class GraduateStudent extends StudentFees {
 
+<<<<<<< HEAD
+=======
 public class GraduateStudent extends StudentFees {
     int coursesEnrolled;
     boolean isGraduateAssistant = true;
@@ -53,4 +55,5 @@ public class GraduateStudent extends StudentFees {
                 "\nGraduate assistant type: "+ graduateAssistantType + 
                 "\nCourses enrolled: " + getCoursesEnrolled() + "\nPayable amount: " + String.format("%.2f", getPayableAmount());
     }
+>>>>>>> e71f5801472029e4f710321e1bfe7aa129e1684d
 }
