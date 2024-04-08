@@ -53,5 +53,6 @@ public class GraduateStudent extends StudentFees {
         return super.toString() + "\nGraduate assistant: " + isIsGraduateAssistant()
                 + "\nGraduate assistant type: " + graduateAssistantType
                 + "\nCourses enrolled: " + getCoursesEnrolled() + "\nPayable amount: " + String.format("%.2f", getPayableAmount());
+
     }
 }

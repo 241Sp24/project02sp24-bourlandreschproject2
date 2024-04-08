@@ -28,6 +28,7 @@ public class UGStudent extends StudentFees {
 
     @Override
     public double getPayableAmount() {
+
         int coursesEnrolled = getCoursesEnrolled();
         int totalCredits = coursesEnrolled * getCREDITS_PER_COURSE();
         double payableAmount = (totalCredits * getPER_CREDIT_FEE()) - getScholarshipAmount() + ADDITIONAL_FEE;
@@ -35,10 +36,12 @@ public class UGStudent extends StudentFees {
             payableAmount = 0.0;
         }
         return payableAmount;
+
     }
 
     @Override
     public String toString() {
+
         return super.toString() + "\nEnrolled: " + isIsEnrolled() + "\nScholarship: " + isHasScholarship() + "\nScholarship Amount: "
                 + String.format("%.2f", getScholarshipAmount()) + "\nCourses Enrolled: "
                 + getCoursesEnrolled() + "\nPayable Amount: " + String.format("%.2f", getPayableAmount());
