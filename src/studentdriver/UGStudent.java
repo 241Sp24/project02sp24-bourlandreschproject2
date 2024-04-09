@@ -43,9 +43,9 @@ public class UGStudent extends StudentFees {
     @Override
     public String toString() {
 
-        return super.toString() + "\nEnrolled: " + isIsEnrolled() + "\nScholarship: " + isHasScholarship() + "\nScholarship Amount: "
+        return super.toString() + "\nScholarship: " + isHasScholarship() + "\nScholarship Amount: "
                 + String.format("%.2f", getScholarshipAmount()) + "\nCourses Enrolled: "
-                + getCoursesEnrolled() + "\nPayable Amount: " + String.format("%.2f", getPayableAmount());
+                + getCoursesEnrolled() + "\nPayable Amount: " + String.format("%.2f", getPayableAmount()); 
     }
 
 }
