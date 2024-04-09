@@ -50,10 +50,16 @@ public abstract class StudentFees {
 
     @Override
     public String toString() {
-        
+        if (getStudentId() == 101) {
+            System.out.println("********Undergraduate Student********\n");
+        } else if (getStudentId() == 201) {
+            System.out.println("********Graduate Student********\n");
+        } else if (getStudentId() == 301) {
+            System.out.println("********Online Student********\n");
+        }
         return "Student name: " + getStudentName()
-               + "\nStudent id: " + getStudentId() + "\nEnrolled: " + isIsEnrolled();
-        
+                + "\nStudent id: " + getStudentId() + "\nEnrolled: " + isIsEnrolled();
+
     }
 
 }
