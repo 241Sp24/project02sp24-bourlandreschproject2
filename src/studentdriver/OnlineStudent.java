@@ -1,7 +1,7 @@
 package studentdriver;
 
-
 public class OnlineStudent extends StudentFees {
+
     public int noOfMonths;
     public double MONTHLY_FEE = 1245.25;
 
@@ -13,14 +13,14 @@ public class OnlineStudent extends StudentFees {
     @Override
     public double getPayableAmount() {
         double totalFee = noOfMonths * MONTHLY_FEE;
-        
+
         return totalFee;
     }
+
     @Override
     public String toString() {
-        return super.toString() + "\nNo of months: " + noOfMonths + 
-                "\nPayable Amount: " + String.format("%.2f", getPayableAmount());
-
+        return super.toString() + "\nNo of months: " + noOfMonths
+                + "\nPayable Amount: " + String.format("%.2f", getPayableAmount());
 
     }
 }

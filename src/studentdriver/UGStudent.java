@@ -37,7 +37,6 @@ public class UGStudent extends StudentFees {
         }
         return payableAmount;
 
-      
     }
 
     @Override
