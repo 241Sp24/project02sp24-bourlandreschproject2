@@ -50,12 +50,10 @@ public abstract class StudentFees {
 
     @Override
     public String toString() {
-<<<<<<< HEAD
+        
         return "Student name: " + getStudentName()
                + "\nStudent id: " + getStudentId() + "\nEnrolled: " + isIsEnrolled();
-=======
-        return "Student name: " + getStudentName() + "\nStudent id: " + getStudentId();
->>>>>>> fd21ba0485fc503ad5714f72b507a6d3d47b1aab
+        
     }
 
 }
