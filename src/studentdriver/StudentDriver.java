@@ -6,6 +6,14 @@ import java.io.*;
 public class StudentDriver {
 
     public static void main(String[] args) throws FileNotFoundException {
+
+        int scholarshipCountUG = 0;
+        int totalCoursesUG = 0;
+
+        int graduateAssistantCountGS = 0;
+        int totalCoursesGS = 0;
+
+        int totalCoursesOS = 0;
         StudentFees[] students = new StudentFees[12];
 
         File file = new File("input.csv");
@@ -31,13 +39,18 @@ public class StudentDriver {
             if (id < 200) {
 
                 boolean hasScholarship = Boolean.parseBoolean(data[4]);
+                if (hasScholarship) {
+                    scholarshipCountUG++;
+                }
                 double scholarshipAmount = Double.parseDouble(data[5]);
                 students[stuIndex] = new UGStudent(name, id, enrolled, hasScholarship, scholarshipAmount, coursesEnrolled);
-
+                totalCoursesUG += coursesEnrolled;
             } else if (id < 300) {
 
                 boolean gradAssistantship = Boolean.parseBoolean(data[4]);
-
+                if (gradAssistantship) {
+                    graduateAssistantCountGS++;
+                }
                 if (data.length > 5) {
                     String gradAssistantType = data[5];
                     students[stuIndex] = new GraduateStudent(name, id, enrolled, gradAssistantship, gradAssistantType, coursesEnrolled);
@@ -46,6 +59,7 @@ public class StudentDriver {
                     students[stuIndex] = new GraduateStudent(name, id, enrolled, gradAssistantship, gradAssistantType, coursesEnrolled);
 
                 }
+                totalCoursesGS += coursesEnrolled;
 
             } else if (id < 400) {
                 int numOfMonths = Integer.parseInt(data[3]);
@@ -53,6 +67,7 @@ public class StudentDriver {
             } else {
                 System.out.println("File doesn't contain any data.");
             }
+            totalCoursesOS += coursesEnrolled;
 
             stuIndex++;
         }
@@ -62,18 +77,12 @@ public class StudentDriver {
             System.out.println(student.toString());
             System.out.println("");
         }
-        double scholarshipCountUG = 0;
-        double averageStudentFeeUG = 0;
-        int totalCoursesUG = 0;
-
-        int graduateAssistantCountGS = 0;
-        int totalCoursesGS = 0;
-        double averageStudentFeeGS = 0;
-
-        double averageStudentFeeOS = 0;
+        double averageStudentFeeGS = ((totalCoursesGS * 3) * 543.50) / 5;
+        double averageStudentFeeUG = ((totalCoursesUG * 3) * 543.50) / 4;
+        double averageStudentFeeOS = ((totalCoursesOS * 3) * 543.50) / 3;
 
         System.out.println("**********Undergraduate Students details**********\n Average Students fee:" + averageStudentFeeUG
-                + "Scholarship count: " + scholarshipCountUG + "\nTotal number of courses: " + totalCoursesUG + "\n");
+                + "\nScholarship count: " + scholarshipCountUG + "\nTotal number of courses: " + totalCoursesUG + "\n");
 
         System.out.println("**********Graduate Students details**********\n" + "Average Students fee: " + averageStudentFeeGS
                 + "\nGraduate Assistantship count: " + graduateAssistantCountGS + "\nTotal number of courses: "
