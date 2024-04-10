@@ -79,8 +79,8 @@ public class StudentDriver {
             System.out.println(student.toString());
             System.out.println("");
         }
-        double averageStudentFeeGS = (((totalCoursesGS * 3) * 543.50) - scholarshipSubtract) / 5;
-        double averageStudentFeeUG = ((totalCoursesUG * 3) * 543.50) / 4;
+        double averageStudentFeeGS = (((totalCoursesGS * 3) * 543.50)) / 5;
+        double averageStudentFeeUG = (((totalCoursesUG * 3) * 543.50) - scholarshipSubtract) / 4;
         double averageStudentFeeOS = ((totalCoursesOS * 3) * 543.50) / 3;
 
         System.out.println("**********Undergraduate Students details**********\n Average Students fee:" + averageStudentFeeUG
