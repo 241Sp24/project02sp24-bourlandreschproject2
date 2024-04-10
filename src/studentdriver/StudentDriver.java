@@ -9,6 +9,7 @@ public class StudentDriver {
 
         int scholarshipCountUG = 0;
         int totalCoursesUG = 0;
+        double scholarshipSubtract = 0;
 
         int graduateAssistantCountGS = 0;
         int totalCoursesGS = 0;
@@ -43,6 +44,7 @@ public class StudentDriver {
                     scholarshipCountUG++;
                 }
                 double scholarshipAmount = Double.parseDouble(data[5]);
+                scholarshipSubtract += scholarshipAmount;
                 students[stuIndex] = new UGStudent(name, id, enrolled, hasScholarship, scholarshipAmount, coursesEnrolled);
                 totalCoursesUG += coursesEnrolled;
             } else if (id < 300) {
@@ -77,7 +79,7 @@ public class StudentDriver {
             System.out.println(student.toString());
             System.out.println("");
         }
-        double averageStudentFeeGS = ((totalCoursesGS * 3) * 543.50) / 5;
+        double averageStudentFeeGS = (((totalCoursesGS * 3) * 543.50) - scholarshipSubtract) / 5;
         double averageStudentFeeUG = ((totalCoursesUG * 3) * 543.50) / 4;
         double averageStudentFeeOS = ((totalCoursesOS * 3) * 543.50) / 3;
 
