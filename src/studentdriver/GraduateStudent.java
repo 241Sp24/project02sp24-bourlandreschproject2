@@ -2,11 +2,13 @@ package studentdriver;
 
 public class GraduateStudent extends StudentFees {
 
+    //instance variables
     int coursesEnrolled;
     boolean isGraduateAssistant = true;
     String graduateAssistantType;
     double ADDITIONAL_FEES = 654.45;
 
+    //contructor
     public GraduateStudent(String studentName, int studentID, boolean isEnrolled,
             boolean isGraduateStudent, String graduateAssistantType, int coursesEnrolled) {
         super(studentName, studentID, isEnrolled);
@@ -14,6 +16,7 @@ public class GraduateStudent extends StudentFees {
         this.graduateAssistantType = graduateAssistantType;
         this.coursesEnrolled = coursesEnrolled;
     }
+//second contructor in case there is no assistant
 
     public GraduateStudent(String studentName, int studentID, boolean isEnrolled,
             boolean isGraduateAssistant, int coursesEnrolled) {
@@ -21,6 +24,7 @@ public class GraduateStudent extends StudentFees {
         this.isGraduateAssistant = isGraduateAssistant;
         this.coursesEnrolled = coursesEnrolled;
     }
+//getters
 
     public boolean isIsGraduateAssistant() {
         if (!isGraduateAssistant) {
@@ -33,6 +37,7 @@ public class GraduateStudent extends StudentFees {
         return coursesEnrolled;
     }
 
+    //method to get the payable amount based on graduate student
     @Override
     public double getPayableAmount() {
         int coursesEnrolled = getCoursesEnrolled();
@@ -48,6 +53,7 @@ public class GraduateStudent extends StudentFees {
         return payableAmount;
     }
 
+    //prints it out in the format needed
     @Override
     public String toString() {
         return super.toString() + "\nGraduate assistant: " + isIsGraduateAssistant()
